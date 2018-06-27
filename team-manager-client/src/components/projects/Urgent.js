@@ -10,7 +10,7 @@ class Urgent extends Component {
 
     return (
       <div>
-          <h2>Projects flagged for Assistance:</h2>
+          <h2>Projects flagged for Help:</h2>
           <div className="main">
             <ProjectList projects={urgent} />
             <Route path={`${this.props.match.url}/:projectId`} component={Project} />

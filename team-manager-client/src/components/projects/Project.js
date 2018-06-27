@@ -11,7 +11,7 @@ class Project extends Component {
 
   render() {
     return (
-      <div key={this.props.project.id} className="rproject-box">
+      <div key={this.props.project.id} className="project-box">
         <h2>{this.props.project.title}</h2>
         <p className="description">{this.props.project.info}</p>
         {this.props.project.help_needed &&

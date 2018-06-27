@@ -14,9 +14,9 @@ class ProjectList extends Component {
     })
     const renderProjects = sorted_projects.map(project =>
     <tr key={project.id} className="table-row"  >
-      <td> <Link to={`/rprojects/${project.id}`}><h4 >{project.title}</h4></Link> </td>
-      <td> {project.created_at.substring(0, 10)}</td>
-      <td> {project.created_at.substring(11, 19)}</td>
+      <td> <Link to={`/projects/${project.id}`}><h4 >{project.title}</h4></Link> </td>
+      <td> {project.created_at}</td>
+      <td> {project.created_at}</td>
       <td> {project.info}</td>
       <td> {project.user_email}</td>
       {project.help_needed ? (<td className="flagged-red"> yes </td>) : (<td> no </td>)}
