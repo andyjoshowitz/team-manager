@@ -4,7 +4,7 @@ import { Route } from 'react-router-dom';
 import ProjectList from './ProjectList';
 import project from './Project';
 
-const AllProject = ({ match, projects }) =>
+const AllProjects = ({ match, projects }) =>
   <div>
     <div className="main">
       <h2>&nbsp;</h2>
@@ -15,7 +15,7 @@ const AllProject = ({ match, projects }) =>
 
 const mapStateToProps = (state) => {
   return {
-    reports: state.projects
+    projects: state.projects
   }
 }
 

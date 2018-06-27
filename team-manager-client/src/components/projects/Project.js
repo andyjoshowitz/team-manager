@@ -45,6 +45,6 @@ const mapStateToProps = (state, ownProps) => {
   } else {
     return { project: {title: "Error: does not exist"}, isAdmin: state.auth.currentUser.admin}
   }
-}project
+}
 
 export default connect(mapStateToProps, { deleteProject })(Project);

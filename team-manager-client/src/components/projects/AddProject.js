@@ -31,7 +31,7 @@ class AddProject extends Component {
 
   handleOnSubmit = event => {
     event.preventDefault();
-    this.props.createReport(this.state, this.props.history);
+    this.props.createProject(this.state, this.props.history);
     this.setState({
       title: '',
       help_needed: false,

@@ -1,4 +1,4 @@
-export default function reports(state = [], action){
+export default function projects(state = [], action){
   switch(action.type) {
     case 'SUCCESSFUL_PROJECTS_FETCH':
       return action.projects

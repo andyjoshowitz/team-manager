@@ -6,7 +6,7 @@ import Project from './Project';
 
 class Urgent extends Component {
   render() {
-    const urgent = this.props.projects.filter(report => project.help_needed === true)
+    const urgent = this.props.projects.filter(project => project.help_needed === true)
 
     return (
       <div>

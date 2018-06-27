@@ -3,7 +3,7 @@ import ProjectService from '../../services/ProjectService'
 // ** async actions and action creators **
 const prependProjects = projects => {
   return {
-    type: 'SUCCESSFUL_REPORTS_FETCH',
+    type: 'SUCCESSFUL_PROJECTS_FETCH',
     projects: projects
   }
 }
@@ -19,14 +19,14 @@ export const fetchProjects = () => {
 
 const prependProject = project => {
   return {
-    type: 'SUCCESSFUL_CREATE_REPORT',
+    type: 'SUCCESSFUL_CREATE_PROJECT',
     payload: project
   }
 }
 
 export const createProject = (project, routerHistory) => {
   return dispatch => {
-    return ProjecttService.createProject(project)
+    return ProjectService.createProject(project)
       .then(project => {
         dispatch(prependProject(project));
         routerHistory.push('/projects')
@@ -36,7 +36,7 @@ export const createProject = (project, routerHistory) => {
 
 const destroyProject = id => {
   return {
-    type: 'SUCESSFUL_DELETE_REPORT',
+    type: 'SUCESSFUL_DELETE_PROJECT',
     id: id
   }
 }

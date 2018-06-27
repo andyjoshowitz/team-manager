@@ -2,7 +2,7 @@ const API_URL = 'http://localhost:3001/api'
 
 const ProjectService = {
   fetchProjects() {
-    return fetch(`${API_URL}/reports`)
+    return fetch(`${API_URL}/projects`)
       .then(response => response.json())
   },
 
