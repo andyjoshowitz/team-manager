@@ -46,7 +46,7 @@ class App extends Component {
   constructor() {
     super()
     this.ourGreatSecret = this.ourGreatSecret.bind(this)
-    this.state = { title: "Team Collaberator" };
+    this.state = { title: "Group Manager" };
   }
 
   ourGreatSecret(e){
@@ -90,7 +90,7 @@ class App extends Component {
 
 
             <h1 className="title">{this.state.title}</h1>
-            <p className="catch-phrase">Too Meta (will change)</p>
+            <p className="catch-phrase">Everyone is a Project Manager</p>
           </div>
           <div className="wrapper">
           <Switch>
