@@ -8,9 +8,9 @@ function receiveLogout() {
 
 export default function logoutUser() {
   return dispatch => {
-    localStorage.removeItem('team_collab.token')
-    localStorage.removeItem('team_collab.admin')
-    localStorage.removeItem('team_collab.email')
+    localStorage.removeItem('team_manager.token')
+    localStorage.removeItem('team_manager.admin')
+    localStorage.removeItem('team_manager.email')
     dispatch(receiveLogout())
   }
 }

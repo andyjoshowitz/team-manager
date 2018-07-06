@@ -49,15 +49,15 @@ class App extends Component {
     this.state = { title: "Group Manager" };
   }
 
-  ourGreatSecret(e){
-    e.preventDefault()
-    let secrets = ["Meta Labor Locator", "Boar Mate Collator", "A Tame Collar Robot", "Meat Altar Bro Loco",
-    "Arab Color Tea Molt", "Cobra, Atoll or Meat?", "Lab Coral Mare Toot", "Colt Bola Ate Armor","Boat Corral to Meal",
-    "Abort Amoral Eclat","A Motorboat Caller", "Bromate Allocator", "Arboreal Tact Loom", "Clam Realtor Taboo",
-    "Lateral Robot Coma", "Carrot Ablate Loom" ]
-    let secret = secrets[Math.floor(Math.random()*secrets.length)]
-    this.setState({title: secret})
-  }
+  // ourGreatSecret(e){
+  //   e.preventDefault()
+  //   let secrets = ["Meta Labor Locator", "Boar Mate Collator", "A Tame Collar Robot", "Meat Altar Bro Loco",
+  //   "Arab Color Tea Molt", "Cobra, Atoll or Meat?", "Lab Coral Mare Toot", "Colt Bola Ate Armor","Boat Corral to Meal",
+  //   "Abort Amoral Eclat","A Motorboat Caller", "Bromate Allocator", "Arboreal Tact Loom", "Clam Realtor Taboo",
+  //   "Lateral Robot Coma", "Carrot Ablate Loom" ]
+  //   let secret = secrets[Math.floor(Math.random()*secrets.length)]
+  //   this.setState({title: secret})
+  // }
 
   componentDidMount() {
     this.props.fetchProjects();
