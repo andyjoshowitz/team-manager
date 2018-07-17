@@ -11,7 +11,7 @@ class AddProject extends Component {
       help_needed: false,
       info: '',
       proj_url: '',
-      user_email: localStorage.getItem('team_collab.email')
+      user_email: localStorage.getItem('team_manager.email')
     }
   }
 

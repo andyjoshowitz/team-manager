@@ -46,9 +46,9 @@ export default function signup(creds, router) {
     .then(response => response.json())
     .then(body => {
       if (body.user.id) {
-        localStorage.setItem('team_collab.token', body.token);
-        localStorage.setItem('team_collab.admin', body.user.admin);
-        localStorage.setItem('team_collab.email', body.user.email);
+        localStorage.setItem('team_manager.token', body.token);
+        localStorage.setItem('team_manager.admin', body.user.admin);
+        localStorage.setItem('team_manager.email', body.user.email);
         dispatch(setCurrentUser(body.user));
         router.replace(`/`)
       } else {

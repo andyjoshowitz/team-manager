@@ -25,6 +25,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch, NavLink, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import AddProject from './components/projects/AddProject';
+import RateProject from './components/projects/RateProject';
 import NoPermission from './components/users/NoPermission';
 import AllProjects from './components/projects/AllProjects';
 import Project from './components/projects/Project';
@@ -45,7 +46,7 @@ import './App.css';
 class App extends Component {
   constructor() {
     super()
-    this.ourGreatSecret = this.ourGreatSecret.bind(this)
+    // this.ourGreatSecret = this.ourGreatSecret.bind(this)
     this.state = { title: "Group Manager" };
   }
 

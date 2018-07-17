@@ -34,6 +34,36 @@ export const createProject = (project, routerHistory) => {
   }
 }
 
+export const incLikeCount = id => {
+  console.log('Hey there!')
+  // return dispatch => {
+  //   return ProjectService.incLikeCount(id)
+  //   .then(project => {
+  //     dispatch(updateProject(project));
+  //   })
+  // }
+}
+
+
+const editProject = project => {
+  return {
+    type: 'UPDATE_PROJECT',
+    payload: project
+  };
+}
+
+export const updateProject = (project, routerHistory) => {
+  return dispatch => {
+    return ProjectService.updateProject(project)
+      .then(project => {
+        dispatch(editProject(project));
+        console.log("hello");
+        routerHistory.push('/projects')
+      })
+  }
+};
+
+
 const destroyProject = id => {
   return {
     type: 'SUCESSFUL_DELETE_PROJECT',

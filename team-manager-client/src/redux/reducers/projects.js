@@ -7,6 +7,8 @@ export default function projects(state = [], action){
       return state.concat(project)
     case 'SUCESSFUL_DELETE_PROJECT':
       return state.filter(project => project.id !== action.id)
+    // case 'UPDATE_PROJECT':
+    //   return project
     default:
       return state;
   }

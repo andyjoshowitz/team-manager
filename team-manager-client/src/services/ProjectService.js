@@ -21,6 +21,21 @@ const ProjectService = {
       .then(response => response.json())
   },
 
+  updateProject(project) {
+    const request = {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        project,
+      })
+    }
+    return fetch(`${API_URL}/projects`, request)
+      .then(response => response.json())
+  },
+
+
   deleteProject(project) {
     return fetch(`${API_URL}/projects/` + project.id, {
       method: 'delete'
