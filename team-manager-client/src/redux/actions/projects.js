@@ -34,31 +34,30 @@ export const createProject = (project, routerHistory) => {
   }
 }
 
-export const incLikeCount = id => {
-  console.log('Hey there!')
-  // return dispatch => {
-  //   return ProjectService.incLikeCount(id)
-  //   .then(project => {
-  //     dispatch(updateProject(project));
-  //   })
-  // }
-}
+// export const incLikeCount = id => {
+//   return dispatch => {
+//     return ProjectService.incLikeCount(id)
+//     .then(project => {
+//       dispatch(updateProject(project));
+//     })
+//   }
+// }
 
 
 const editProject = project => {
   return {
-    type: 'UPDATE_PROJECT',
+    type: 'UPDATE_PROJECT_SUCCEEDED',
     payload: project
   };
 }
 
-export const updateProject = (project, routerHistory) => {
+export const updateProject = (project) => {
   return dispatch => {
     return ProjectService.updateProject(project)
       .then(project => {
         dispatch(editProject(project));
-        console.log("hello");
-        routerHistory.push('/projects')
+        // console.log("hello");
+        // routerHistory.push('/projects')
       })
   }
 };

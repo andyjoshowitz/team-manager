@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 2018_06_27_000000) do
     t.boolean "help_needed"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "like_count"
+    t.integer "like_count", default: 0
   end
 
   create_table "users", force: :cascade do |t|
