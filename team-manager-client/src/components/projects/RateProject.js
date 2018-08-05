@@ -56,11 +56,27 @@ class RateProject extends Component {
   }
 
   onDislike = () => {
-    let count = this.state.counter
-    // this.props.updateProject(this.state, this.props.history);
-    this.setState({
-      like_count: this.state.like_count - 1
+    // let count = this.state.counter
+    // // this.props.updateProject(this.state, this.props.history);
+    // this.setState({
+    //   like_count: this.state.like_count - 1
+    // })
+    this.props.project.like_count -=1
+    const project = this.props.project;
+    console.log(project)
+    // function updateProject(project) {
+    return fetch(`http://localhost:3001/api/projects/${this.props.project.id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(project)
     })
+    .then(() => {
+      const likeCount = this.state.like_count -1;
+      console.log("The Count:", likeCount);
+      this.setState({like_count: likeCount})
+    })  
   }
 
   render() {
